@@ -1,0 +1,25 @@
+{
+  "county_geoid": "37069",
+  "h3_res": 8,
+  "census": {
+    "path": "data/raw/tl_2025_us_county.zip",
+    "url": "https://ww2.census.gov/geo/tiger/TIGER2025/COUNTY/tl_2025_us_county.zip",
+    "data_acquired": "2026-10-12"
+  },
+  "ookla": null,
+  "opencellid": null,
+  "fcc": {
+    "reference_date": null,
+    "inventory_verified": null,
+    "inventory_src_url": null,
+    "expected_provider_ids": [],
+    "layers": []
+  },
+  "scenario": {
+    "download_mbps": 5.0,
+    "min_tests": 10,
+    "min_devices": 3,
+    "site_count": 3,
+    "radius_km": 2.0
+  }
+}

@@ -33,6 +33,6 @@ def load_config(config_path: Path):
     
     return config
 
-def resolve_config(config, path):
+def resolve_path(config, path):
     result = Path(path)
     return result if result.is_absolute() else Path(config["_base"]) / result

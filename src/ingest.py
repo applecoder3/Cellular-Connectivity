@@ -13,7 +13,7 @@ import uuid
 import geopandas as gpd
 import pandas as pd
 import pyarrow.parquet as pq
-
+import pyogrio
 from shapely import from_wkt
 from shapely.ops import unary_union
 

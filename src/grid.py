@@ -27,7 +27,7 @@ def build_grid(county, resolution=8):
     rows = []
 
     for cell in sorted(expanded):
-        polygon = Polygon([(lon, lat) for lat, lon in h3.cell_to_boundary(cell, geo_json=True)]) # verify geo_json=True is correct
+        polygon = Polygon([(lon, lat) for lat, lon in h3.cell_to_boundary(cell)]) 
         if polygon.intersects(boundary):
             rows.append({"h3_id": cell, "geometry": polygon})
     

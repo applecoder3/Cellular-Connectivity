@@ -7,11 +7,21 @@ import json
 import math
 
 
-ROOT = Path(__file__).resolve().parent[1]
+ROOT = Path(__file__).resolve().parents[1]
 WGS84 = "EPSG:4326"
 METRIC_CRS = "EPSG:32617"
 
- 
+ATTRIBUTIONS = {
+    "census": "U.S. Census Bureau, 2025 TIGER/Line county boundaries. https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html",
+    "opencellid": "OpenCelliD, CC BY-SA 4.0. https://opencellid.org/ https://creativecommons.org/licenses/by-sa/4.0/",
+    "ookla": "Speedtest® by Ookla® Global Fixed and Mobile Network Performance Maps. CC BY-NC-SA 4.0. https://github.com/teamookla/ookla-open-data https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "fcc": "FCC National Broadband Map, provider-reported mobile broadband availability. https://broadbandmap.fcc.gov/",
+}
+LIMITATION = (
+    "Hypothetical fixed-radius scenarios show eligible area reached, not predicted "
+    "signal strength or speed improvements. Terrain, antennas, spectrum, congestion, "
+    "backhaul, construction feasibility and population are not modeled. County area includes water."
+)
 
 
 @dataclass(frozen=True)

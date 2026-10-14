@@ -38,12 +38,14 @@ def prepare(config, output=ROOT / "data" / "processed"):
     provenance = {"census": file_record(config, census, "census")}
     ookla_source = config.get("ookla") or {}
     ookla = empty_layer()
+
     if ookla_source.get("path"):
         ookla = read_ookla(resolve_path(config, ookla_source["path"]), ookla_source, county)
         provenance["ookla"] = file_record(config, ookla_source, "ookla")
         provenance["ookla"].update(quarter=ookla_source["quarter"], service_type="mobile")
     cell_source = config.get("opencellid") or {}
     cells = empty_layer()
+    
     if cell_source.get("path") and "paths" in cell_source:
         raise ValueError("OpenCelliD config must use either 'path' or 'paths', not both.")
     cell_paths = cell_source.get("paths", [cell_source["path"]] if cell_source.get("path") else [])

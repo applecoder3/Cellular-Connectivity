@@ -1,4 +1,6 @@
-"""
-This file will be the home code for streamlit frontend application
 
-"""
+"Lauch for streamlit main app: python -m streamlit run app.py"
+
+from src.app import run
+
+run()

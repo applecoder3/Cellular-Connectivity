@@ -44,5 +44,5 @@ def build_grid(county, resolution=8):
 
 def candidate_sites(grid):
     result = grid[["h3_id", "geometry"]].copy()
-    result["geometry"] = result.geometry.respresentative_point()
+    result["geometry"] = result.geometry.representative_point()
     return result.rename(columns={"h3_id": "candidate_id"})

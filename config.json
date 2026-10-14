@@ -7,7 +7,12 @@
     "data_acquired": "2026-10-12"
   },
   "ookla": null,
-  "opencellid": null,
+  "opencellid": {
+    "path": "data/raw/310.csv.gz",
+    "headerless": true,
+    "source_url": "https://opencellid.org/downloads.php",
+    "data_acquired": "2026-10-12"
+  },
   "fcc": {
     "reference_date": null,
     "inventory_verified": null,
